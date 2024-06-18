@@ -1,0 +1,1 @@
+Aqui se encuentran todos los archivos del html tales como js y css a la hora de importar los archivos con thymeleft esta es el directorio por defecto para buscar dichos archivos.

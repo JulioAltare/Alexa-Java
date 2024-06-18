@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+  <title>Demo Alexa</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<!--  <link rel="stylesheet" th:href="@{/css/bootstrap.css}">-->
+  <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+  <link rel="stylesheet" th:href="@{/css/index.css}">
+
+</head>
+<body>
+<div class="container">
+  <div class="main-body p-0">
+    <div th:each="comment : ${comments}" class="card mb-2">
+      <div class="card-body p-2 p-sm-3">
+        <div class="media forum-item">
+          <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-circle" width="50" alt="User" />
+          <div class="media-body">
+            <h6 th:text="${comment.creator}"></h6>
+            <p th:text="${comment.content}" class="text-secondary">
+            </p>
+            <p class="text-muted"> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button th:onclick="helloWorld()" type="button" class="btn btn-primary">Enviar</button>
+</div>
+
+
+<script type="text/javascript" th:src="@{/js/jquery-3.7.1.slim.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/index.js}"></script>
+</body>
+</html>
